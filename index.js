@@ -14,8 +14,16 @@ import capacityMessage from './models/capacityMessage.js';
 
 const app = express();
 
+let corsOrigins=[];
+
+if(process.env.REQUEST_ORIGIN){
+    corsOrigins=[process.env.REQUEST_ORIGIN];
+}
+else{
+    corsOrigins=["http://localhost:3000"];
+}
 const corsOptions = {
-    origin: 'https://iramd24.github.io', //'http://localhost:3000' 
+    origin: corsOrigins, //'http://localhost:3000' 
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
