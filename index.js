@@ -15,7 +15,7 @@ import capacityMessage from './models/capacityMessage.js';
 const app = express();
 
 const corsOptions = {
-    origin: 'https://iramd24.github.io/nao-reto-2-front-end', //'http://localhost:3000'
+    origin: 'https://iramd24.github.io', //'http://localhost:3000' 
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
